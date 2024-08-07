@@ -323,6 +323,7 @@ def aggregate(args: argparse.Namespace) -> None:
         os.remove(generate_conf)
 
     targets, records = [], {}
+    records[source] = supplier
     for target in args.targets:
         target = utils.trim(target).lower()
         convert_name = f'convert_{target.replace("&", "_").replace("=", "_")}'
