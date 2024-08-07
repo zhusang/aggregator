@@ -345,7 +345,7 @@ def aggregate(args: argparse.Namespace) -> None:
             records[t[1]] = filepath
 
     if len(records) > 0:
-        os.remove(supplier)
+        print(supplier)
     else:
         logger.error(f"all targets convert failed, you can view the temporary file: {supplier}")
         sys.exit(1)
